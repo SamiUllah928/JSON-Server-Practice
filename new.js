@@ -13,7 +13,7 @@ fetch('  http://localhost:3000/photos')
          data+=`
         
 <div class="sett">
-         
+          
         <div class="senoir">
         <img src="${element.image}" alt="">
     </div>
@@ -129,8 +129,7 @@ document.getElementById('editform').addEventListener('submit',(e)=>{
         image,
         title,
         description,
-
-    }
+        }
     let option={
         method:'PATCH',
         body:JSON.stringify(data),
@@ -140,21 +139,9 @@ document.getElementById('editform').addEventListener('submit',(e)=>{
     }
 
     fetch(`http://localhost:3000/photos/${id}`,option).then(()=>getproduct())
-
-
-})
-
-   
+})  
 }
 patchdata()
-
-
-
-
-
-
-
-
 }
 console.log(arr)
 updateproduct()
